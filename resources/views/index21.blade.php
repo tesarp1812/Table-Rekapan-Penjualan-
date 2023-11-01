@@ -5,7 +5,7 @@
     <a href="http://tes-web.landa.id/intermediate/menu" target="_blank" rel="Array Menu" class="btn btn-secondary">
         Json Menu
     </a>
-    <a href="https://tes-web.landa.id/intermediate/transaksi?tahun=2022" target="_blank" rel="Array Menu"
+    <a href="https://tes-web.landa.id/intermediate/transaksi?tahun=2021" target="_blank" rel="Array Menu"
         class="btn btn-secondary">
         Json Transaksi
     </a>
