@@ -40,9 +40,9 @@
                                 $bulanTotal = $totalPerMenuPerBulanMakanan[$item['menu']][$month] ?? 0;
                                 $totalMenu += $bulanTotal;
                             @endphp
-                            <td>{{ $bulanTotal }}</td>
+                            <td>{{ number_format($bulanTotal) }}</td>
                         @endforeach
-                        <td><b>{{ $totalMenu }}</b></td>
+                        <td>{{ number_format($totalMenu) }}</td>
                     </tr>
                 @endforeach
                 <tr>
@@ -59,11 +59,31 @@
                                 $bulanTotal = $totalPerMenuPerBulanMinuman[$item['menu']][$month] ?? 0;
                                 $totalMenu += $bulanTotal;
                             @endphp
-                            <td>{{ $bulanTotal }}</td>
+                            <td>{{ number_format($bulanTotal) }}</td>
                         @endforeach
-                        <td><b>{{ $totalMenu }}</b></td>
+                        <td>{{ number_format($totalMenu) }}</td>
                     </tr>
                 @endforeach
+                <tr>
+                    <td class="table-dark">Total</td>
+                    @php
+                        $totalAllMenus = 0; // Inisialisasi total semua menu
+                    @endphp
+                    @foreach ($allMonths as $month)
+                        @php
+                            $bulanTotal = 0;
+                            foreach ($kategorisMakanan as $item) {
+                                $bulanTotal += $totalPerMenuPerBulanMakanan[$item['menu']][$month] ?? 0;
+                            }
+                            foreach ($kategorisMinuman as $item) {
+                                $bulanTotal += $totalPerMenuPerBulanMinuman[$item['menu']][$month] ?? 0;
+                            }
+                            $totalAllMenus += $bulanTotal;
+                        @endphp
+                        <td class="table-dark">{{ number_format($bulanTotal) }}</td>
+                    @endforeach
+                    <td class="table-dark">{{ number_format($totalAllMenus) }}</td>
+                </tr>
             </tbody>
         </table>
     </div>
