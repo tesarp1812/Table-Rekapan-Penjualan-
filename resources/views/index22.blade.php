@@ -1,4 +1,4 @@
-@extends('index');
+@extends('index')
 
 @section('content')
 @section('button')
@@ -40,9 +40,9 @@
                                 $bulanTotal = $totalPerMenuPerBulanMakanan[$item['menu']][$month] ?? 0;
                                 $totalMenu += $bulanTotal;
                             @endphp
-                            <td>{{ $bulanTotal === 0 ? '' : number_format($bulanTotal) }}</td>
+                            <td style="text-align: right;">{{ $bulanTotal === 0 ? '' : number_format($bulanTotal) }}</td>
                         @endforeach
-                        <td>{{ $totalMenu === 0 ? '' : number_format($totalMenu) }}</td>
+                        <td style="text-align: right;"><b>{{ $totalMenu === 0 ? '0' : number_format($totalMenu) }}</b></td>
                     </tr>
                 @endforeach
                 <tr>
@@ -59,9 +59,9 @@
                                 $bulanTotal = $totalPerMenuPerBulanMinuman[$item['menu']][$month] ?? 0;
                                 $totalMenu += $bulanTotal;
                             @endphp
-                            <td>{{ $bulanTotal === 0 ? '' : number_format($bulanTotal) }}</td>
+                            <td style="text-align: right;">{{ $bulanTotal === 0 ? '' : number_format($bulanTotal) }}</td>
                         @endforeach
-                        <td>{{ $totalMenu === 0 ? '' : number_format($totalMenu) }}</td>
+                        <td style="text-align: right;"><b>{{ $totalMenu === 0 ? '0' : number_format($totalMenu) }}</b></td>
                     </tr>
                 @endforeach
                 <tr>
@@ -80,9 +80,9 @@
                             }
                             $totalAllMenus += $bulanTotal;
                         @endphp
-                        <td class="table-dark">{{ $bulanTotal === 0 ? '' : number_format($bulanTotal) }}</td>
+                        <td class="table-dark" style="text-align: right;">{{ $bulanTotal === 0 ? '' : number_format($bulanTotal) }}</td>
                     @endforeach
-                    <td class="table-dark">{{ $totalAllMenus === 0 ? '' : number_format($totalAllMenus) }}</td>
+                    <td class="table-dark" style="text-align: right;">{{ $totalAllMenus === 0 ? '' : number_format($totalAllMenus) }}</td>
                 </tr>
             </tbody>
         </table>

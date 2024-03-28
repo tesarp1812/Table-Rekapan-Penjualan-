@@ -16,8 +16,8 @@ class venturoController extends Controller
     public function index21()
     {
         $client = new Client();
-        $menuUrl = 'https://tes-web.landa.id/intermediate/menu';
-        $transaksiUrl = 'https://tes-web.landa.id/intermediate/transaksi?tahun=2021';
+        $menuUrl = 'http://tes-web.landa.id/intermediate/menu';
+        $transaksiUrl = 'http://tes-web.landa.id/intermediate/transaksi?tahun=2021';
 
         // Ambil data menu
         $menuResponse = $client->get($menuUrl);
@@ -88,8 +88,8 @@ class venturoController extends Controller
     public function index22()
     {
         $client = new Client();
-        $menuUrl = 'https://tes-web.landa.id/intermediate/menu';
-        $transaksiUrl = 'https://tes-web.landa.id/intermediate/transaksi?tahun=2022';
+        $menuUrl = 'http://tes-web.landa.id/intermediate/menu';
+        $transaksiUrl = 'http://tes-web.landa.id/intermediate/transaksi?tahun=2022';
 
         // Ambil data menu
         $menuResponse = $client->get($menuUrl);
